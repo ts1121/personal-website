@@ -1,0 +1,100 @@
+/* Reset margins and set smooth scroll */
+html, body {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Section padding and alignment */
+section {
+  padding: 60px 0;
+}
+
+/* Section titles */
+section h2 {
+  font-weight: 600;
+  margin-bottom: 25px;
+  border-bottom: 2px solid #dee2e6;
+  padding-bottom: 10px;
+}
+
+/* Navbar fix for scroll offset */
+:target::before {
+  content: "";
+  display: block;
+  height: 100px; /* height of fixed navbar */
+  margin-top: -100px;
+}
+
+/* Profile photo */
+img.rounded-circle {
+  max-width: 100%;
+  height: auto;
+  border: 3px solid #dee2e6;
+  padding: 5px;
+}
+
+/* Resume/CV Download Buttons */
+.download-buttons .btn {
+  font-size: 1rem;
+  padding: 10px 20px;
+}
+
+/* Contact Icons Bar */
+.contact-icons {
+  margin-top: 20px;
+}
+
+.contact-icons a {
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  margin: 0 10px;
+}
+
+.contact-icons a:hover {
+  color: #0d6efd;
+}
+
+/* Light/Dark icon button */
+.theme-toggle {
+  font-size: 1.2rem;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  padding: 5px;
+}
+
+/* Dark mode overrides */
+[data-bs-theme="dark"] body {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+[data-bs-theme="dark"] .navbar {
+  background-color: #1f1f1f;
+  border-bottom: 1px solid #333;
+}
+
+[data-bs-theme="dark"] section h2 {
+  border-color: #444;
+}
+
+[data-bs-theme="dark"] .contact-icons a {
+  color: #ccc;
+}
+
+[data-bs-theme="dark"] .contact-icons a:hover {
+  color: #66ccff;
+}
+
+[data-bs-theme="dark"] .btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+[data-bs-theme="dark"] .btn-secondary {
+  background-color: #6c757d;
+  border-color: #6c757d;
+}
