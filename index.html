@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-bs-theme="light">
+<html lang="en" data-bs-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,24 +11,61 @@
   <!-- Font Awesome (CDN) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
+  <!-- Google Fonts: Fira Code -->
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+
   <!-- Custom Styles -->
   <link rel="stylesheet" href="style.css">
 
   <style>
-    [data-bs-theme="dark"] .nav-link {
-      color: #e0e0e0 !important;
+    body {
+      font-family: 'Fira Code', monospace;
+      background-color: #0f111a;
+      color: #e0e0e0;
+      background-image: url('assets/noise.png');
+      background-size: cover;
     }
-    [data-bs-theme="dark"] .nav-link:hover {
-      color: #66ccff !important;
+
+    a, .nav-link {
+      color: #00ff99 !important;
+    }
+
+    a:hover, .nav-link:hover {
+      color: #a64eff !important;
+    }
+
+    .section {
+      background: #13151e;
+      border: 1px solid #00ff99;
+      border-radius: 12px;
+      padding: 2rem;
+      margin-bottom: 3rem;
+      box-shadow: 0 0 10px #00ff99;
+    }
+
+    .section-divider svg {
+      display: block;
+      width: 100%;
+      height: 80px;
+    }
+
+    .contact-icons a {
+      font-size: 2rem;
+      margin-right: 15px;
+    }
+
+    .download-buttons .btn {
+      margin-right: 1rem;
+      margin-top: 1rem;
     }
   </style>
 </head>
 <body>
 
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top shadow-sm">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm border-bottom border-success">
     <div class="container">
-      <a class="navbar-brand fw-bold" href="#">Talha Siddique</a>
+      <a class="navbar-brand fw-bold text-neon" href="#">Talha Siddique</a>
       <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -43,7 +80,7 @@
           <li class="nav-item"><a class="nav-link" href="#downloads">CV/Resume</a></li>
           <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
         </ul>
-        <button class="btn btn-outline-secondary theme-toggle" onclick="toggleTheme()" title="Toggle light/dark mode">
+        <button class="btn btn-outline-success theme-toggle" onclick="toggleTheme()" title="Toggle light/dark mode">
           <i class="fas fa-moon"></i>
         </button>
       </div>
@@ -51,14 +88,14 @@
   </nav>
 
   <!-- Main Content -->
-  <main class="container" style="margin-top: 100px;">
+  <main class="container" style="margin-top: 120px;">
 
     <!-- About -->
-    <section id="about">
+    <section id="about" class="section">
       <h2>About Me</h2>
       <div class="row align-items-center">
         <div class="col-md-3">
-          <img src="assets/profile.jpg" class="img-fluid rounded-circle shadow-sm" alt="Profile Photo">
+          <img src="assets/profile.jpg" class="img-fluid rounded-circle shadow" alt="Profile Photo">
         </div>
         <div class="col-md-9">
           <p>Hello! I’m Talha Siddique, a Postdoctoral Research Associate at the Center for Coastal and Ocean Mapping (UNH). My work focuses on embedded ML, remote sensing, and signal processing. I enjoy developing scalable, resource-efficient AI systems that solve real-world scientific problems.</p>
@@ -66,8 +103,12 @@
       </div>
     </section>
 
+    <div class="section-divider">
+      <svg viewBox="0 0 1440 320"><path fill="#1f8ef1" fill-opacity="1" d="M0,64L1440,160L1440,320L0,320Z"></path></svg>
+    </div>
+
     <!-- Education -->
-    <section id="education">
+    <section id="education" class="section">
       <h2>Education</h2>
       <ul>
         <li>Ph.D., Electrical and Computer Engineering — UNH (2019–2025)</li>
@@ -77,19 +118,19 @@
     </section>
 
     <!-- Experience -->
-    <section id="experience">
+    <section id="experience" class="section">
       <h2>Professional Experience</h2>
       <p>Highlights of academic, research, and assistantship positions from Ph.D., M.S., and postdoc years. Includes embedded ML systems, signal processing, space weather prediction, and interdisciplinary collaborations.</p>
     </section>
 
     <!-- Publications -->
-    <section id="publications">
+    <section id="publications" class="section">
       <h2>Peer-reviewed Publications and Presentations</h2>
       <p>Placeholder for selected journal papers, IEEE conferences, and workshop abstracts. You can format this using a list, grid, or downloadable BibTeX entries.</p>
     </section>
 
     <!-- Skills -->
-    <section id="skills">
+    <section id="skills" class="section">
       <h2>Skills and Certifications</h2>
       <ul>
         <li>Programming: Python, C/C++, Java, R, MATLAB</li>
@@ -99,22 +140,22 @@
     </section>
 
     <!-- Misc -->
-    <section id="misc">
+    <section id="misc" class="section">
       <h2>Miscellaneous</h2>
       <p>Awards, honors, student memberships, volunteering roles, and reviewer duties (IEEE IoT Journal, IEEE Access, etc.)</p>
     </section>
 
     <!-- Download Section -->
-    <section id="downloads">
+    <section id="downloads" class="section">
       <h3>Download Resume & CV</h3>
       <div class="download-buttons">
-        <a href="resume.pdf" class="btn btn-primary" download><i class="fas fa-file-alt"></i> Download Resume</a>
-        <a href="cv.pdf" class="btn btn-secondary" download><i class="fas fa-file-archive"></i> Download Full CV</a>
+        <a href="resume.pdf" class="btn btn-success" download><i class="fas fa-file-alt"></i> Download Resume</a>
+        <a href="cv.pdf" class="btn btn-outline-info" download><i class="fas fa-file-archive"></i> Download Full CV</a>
       </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact">
+    <section id="contact" class="section">
       <h3>Contact</h3>
       <div class="contact-icons">
         <a href="mailto:talhasiddique265@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a>
@@ -124,13 +165,12 @@
         <a href="https://scholar.google.com/citations?user=zN-CBUwAAAAJ&hl=en" target="_blank" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
       </div>
     </section>
-
   </main>
 
   <!-- Bootstrap JS (CDN) -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-  <!-- Custom Script -->
+  <!-- Custom Theme Toggle Script -->
   <script>
     function toggleTheme() {
       const root = document.documentElement;
@@ -171,4 +211,3 @@
   </script>
 </body>
 </html>
-
