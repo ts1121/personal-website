@@ -13,6 +13,15 @@
 
   <!-- Custom Styles -->
   <link rel="stylesheet" href="style.css">
+
+  <style>
+    [data-bs-theme="dark"] .nav-link {
+      color: #e0e0e0 !important;
+    }
+    [data-bs-theme="dark"] .nav-link:hover {
+      color: #66ccff !important;
+    }
+  </style>
 </head>
 <body class="bg-light text-dark">
 
@@ -31,6 +40,8 @@
           <li class="nav-item"><a class="nav-link" href="#publications">Publications</a></li>
           <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
           <li class="nav-item"><a class="nav-link" href="#misc">Misc</a></li>
+          <li class="nav-item"><a class="nav-link" href="#downloads">CV/Resume</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
         </ul>
         <button class="btn btn-outline-secondary theme-toggle" onclick="toggleTheme()" title="Toggle light/dark mode">
           <i class="fas fa-moon"></i>
@@ -94,7 +105,7 @@
     </section>
 
     <!-- Download Section -->
-    <section>
+    <section id="downloads">
       <h3>Download Resume & CV</h3>
       <div class="download-buttons">
         <a href="resume.pdf" class="btn btn-primary" download><i class="fas fa-file-alt"></i> Download Resume</a>
@@ -103,7 +114,7 @@
     </section>
 
     <!-- Contact Section -->
-    <section>
+    <section id="contact">
       <h3>Contact</h3>
       <div class="contact-icons">
         <a href="mailto:talhasiddique265@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a>
