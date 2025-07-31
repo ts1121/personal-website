@@ -1,100 +1,58 @@
-/* Reset margins and set smooth scroll */
-html, body {
-  margin: 0;
-  padding: 0;
-  scroll-behavior: smooth;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+body {
+  font-family: 'Fira Code', monospace;
+  background-color: #0f111a;
+  color: #e0e0e0;
+  background-image: url('assets/noise.png');
+  background-size: cover;
 }
 
-/* Section padding and alignment */
-section {
-  padding: 60px 0;
+a, .nav-link {
+  color: #00ff99 !important;
 }
 
-/* Section titles */
-section h2 {
-  font-weight: 600;
-  margin-bottom: 25px;
-  border-bottom: 2px solid #dee2e6;
-  padding-bottom: 10px;
+a:hover, .nav-link:hover {
+  color: #a64eff !important;
 }
 
-/* Navbar fix for scroll offset */
-:target::before {
-  content: "";
+.navbar-brand {
+  font-weight: bold;
+  color: #00ffcc !important;
+}
+
+.navbar {
+  border-bottom: 1px solid #00ff99;
+}
+
+.section {
+  background: #13151e;
+  border: 1px solid #00ff99;
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 3rem;
+  box-shadow: 0 0 10px #00ff99;
+}
+
+.section-divider svg {
   display: block;
-  height: 100px; /* height of fixed navbar */
-  margin-top: -100px;
-}
-
-/* Profile photo */
-img.rounded-circle {
-  max-width: 100%;
-  height: auto;
-  border: 3px solid #dee2e6;
-  padding: 5px;
-}
-
-/* Resume/CV Download Buttons */
-.download-buttons .btn {
-  font-size: 1rem;
-  padding: 10px 20px;
-}
-
-/* Contact Icons Bar */
-.contact-icons {
-  margin-top: 20px;
+  width: 100%;
+  height: 80px;
 }
 
 .contact-icons a {
-  color: #333;
-  text-decoration: none;
-  transition: color 0.3s ease;
-  margin: 0 10px;
+  font-size: 2rem;
+  margin-right: 15px;
+  color: #00ff99;
 }
 
 .contact-icons a:hover {
-  color: #0d6efd;
+  color: #a64eff;
 }
 
-/* Light/Dark icon button */
-.theme-toggle {
+.download-buttons .btn {
+  margin-right: 1rem;
+  margin-top: 1rem;
+}
+
+.theme-toggle i {
   font-size: 1.2rem;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  padding: 5px;
-}
-
-/* Dark mode overrides */
-[data-bs-theme="dark"] body {
-  background-color: #121212;
-  color: #e0e0e0;
-}
-
-[data-bs-theme="dark"] .navbar {
-  background-color: #1f1f1f;
-  border-bottom: 1px solid #333;
-}
-
-[data-bs-theme="dark"] section h2 {
-  border-color: #444;
-}
-
-[data-bs-theme="dark"] .contact-icons a {
-  color: #ccc;
-}
-
-[data-bs-theme="dark"] .contact-icons a:hover {
-  color: #66ccff;
-}
-
-[data-bs-theme="dark"] .btn-primary {
-  background-color: #007bff;
-  border-color: #007bff;
-}
-
-[data-bs-theme="dark"] .btn-secondary {
-  background-color: #6c757d;
-  border-color: #6c757d;
 }
