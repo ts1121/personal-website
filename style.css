@@ -1,3 +1,7 @@
+html {
+  scroll-padding-top: 100px;
+}
+
 body {
   font-family: 'Fira Code', monospace;
   background-color: #0f111a;
@@ -6,36 +10,37 @@ body {
   background-size: cover;
 }
 
-a, .nav-link {
+.navbar-brand {
+  color: #00ffcc !important;
+  font-weight: bold;
+}
+
+.nav-link {
   color: #00ff99 !important;
 }
 
-a:hover, .nav-link:hover {
+.nav-link:hover {
   color: #a64eff !important;
 }
 
-.navbar-brand {
-  font-weight: bold;
-  color: #00ffcc !important;
-}
-
-.navbar {
-  border-bottom: 1px solid #00ff99;
-}
-
 .section {
-  background: #13151e;
-  border: 1px solid #00ff99;
-  border-radius: 12px;
+  background: linear-gradient(to right, #0f111a, #13151e);
+  border: 2px solid transparent;
+  border-image: linear-gradient(90deg, #00ff99, #a64eff, #00ffff) 1;
+  border-radius: 16px;
   padding: 2rem;
   margin-bottom: 3rem;
-  box-shadow: 0 0 10px #00ff99;
+  box-shadow: 0 0 10px rgba(0, 255, 153, 0.4);
+  transition: all 0.3s ease;
 }
 
-.section-divider svg {
-  display: block;
-  width: 100%;
-  height: 80px;
+.section:hover {
+  box-shadow: 0 0 15px #a64eff, 0 0 30px #00ffff inset;
+}
+
+.download-buttons .btn {
+  margin-right: 1rem;
+  margin-top: 1rem;
 }
 
 .contact-icons a {
@@ -46,13 +51,4 @@ a:hover, .nav-link:hover {
 
 .contact-icons a:hover {
   color: #a64eff;
-}
-
-.download-buttons .btn {
-  margin-right: 1rem;
-  margin-top: 1rem;
-}
-
-.theme-toggle i {
-  font-size: 1.2rem;
 }
