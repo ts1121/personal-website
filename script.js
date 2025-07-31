@@ -11,7 +11,6 @@ document.addEventListener("DOMContentLoaded", function () {
           showCursor: true,
           cursorChar: '|',
           onComplete: () => {
-            // Ensure cursor keeps blinking
             entry.target.classList.add('typing-done');
           }
         });
@@ -22,5 +21,8 @@ document.addEventListener("DOMContentLoaded", function () {
     threshold: 0.6
   });
 
-  document.querySelectorAll('.typed').forEach(el => observer.observe(el));
+  document.querySelectorAll('.typed').forEach(el => {
+    el.textContent = '';  // Ensure clean start
+    observer.observe(el);
+  });
 });
