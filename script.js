@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
           strings: [text],
           typeSpeed: 50,
           showCursor: true,
-          cursorChar: '_',
+          cursorChar: '|',
           onComplete: () => {
             entry.target.classList.add('typing-done');
           }
