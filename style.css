@@ -10,37 +10,31 @@ body {
   background-size: cover;
 }
 
-.navbar-brand {
-  color: #00ffcc !important;
-  font-weight: bold;
-}
-
-.nav-link {
-  color: #00ff99 !important;
-}
-
-.nav-link:hover {
-  color: #a64eff !important;
-}
-
 .section {
-  background: linear-gradient(to right, #0f111a, #13151e);
-  border: 2px solid transparent;
-  border-image: linear-gradient(90deg, #00ff99, #a64eff, #00ffff) 1;
-  border-radius: 16px;
+  background: #13151e;
+  border: 1px solid #00ff99;
+  border-radius: 12px;
   padding: 2rem;
   margin-bottom: 3rem;
-  box-shadow: 0 0 10px rgba(0, 255, 153, 0.4);
-  transition: all 0.3s ease;
+  box-shadow: 0 0 10px #00ff99;
 }
 
-.section:hover {
-  box-shadow: 0 0 15px #a64eff, 0 0 30px #00ffff inset;
+/* Ensure the typed text is visible */
+.typed {
+  color: #00ff99;
+  font-size: 1.75rem;
+  font-weight: 600;
 }
 
-.download-buttons .btn {
-  margin-right: 1rem;
-  margin-top: 1rem;
+/* Persistent blinking cursor after typing */
+.typing-done::after {
+  content: '|';
+  animation: blink 1s infinite step-start;
+  margin-left: 4px;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
 }
 
 .contact-icons a {
@@ -51,4 +45,9 @@ body {
 
 .contact-icons a:hover {
   color: #a64eff;
+}
+
+.download-buttons .btn {
+  margin-right: 1rem;
+  margin-top: 1rem;
 }
