@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
           strings: [text],
           typeSpeed: 50,
           showCursor: true,
-          cursorChar: '|', // ✅ Now visible during typing
+          cursorChar: '|',
           loop: false
         });
 
@@ -18,11 +18,27 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   }, {
-    threshold: 0.6
+    threshold: 0.1 // 🔁 Lowered threshold to trigger earlier
   });
 
-  document.querySelectorAll('.typed').forEach(el => {
-    el.textContent = '';  // Clear existing text
-    observer.observe(el);
+  const allTyped = document.querySelectorAll('.typed');
+
+  allTyped.forEach((el, index) => {
+    el.textContent = ''; // Ensure clean start
+
+    // ✅ Type the first section immediately
+    if (index === 0) {
+      const text = el.getAttribute('data-text');
+      new Typed(el, {
+        strings: [text],
+        typeSpeed: 50,
+        showCursor: true,
+        cursorChar: '|',
+        loop: false
+      });
+      observed.add(el);
+    } else {
+      observer.observe(el);
+    }
   });
 });
