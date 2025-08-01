@@ -5,15 +5,15 @@ document.addEventListener("DOMContentLoaded", function () {
     entries.forEach(entry => {
       if (entry.isIntersecting && !observed.has(entry.target)) {
         const text = entry.target.getAttribute('data-text');
+
         new Typed(entry.target, {
           strings: [text],
           typeSpeed: 50,
           showCursor: true,
-          cursorChar: '',
-          onComplete: () => {
-            entry.target.classList.add('typing-done');
-          }
+          cursorChar: '|', // ✅ Now visible during typing
+          loop: false
         });
+
         observed.add(entry.target);
       }
     });
@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   document.querySelectorAll('.typed').forEach(el => {
-    el.textContent = '';  // Ensure clean start
+    el.textContent = '';  // Clear existing text
     observer.observe(el);
   });
 });
