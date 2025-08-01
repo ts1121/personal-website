@@ -24,6 +24,16 @@
     html {
       scroll-padding-top: 100px;
     }
+
+    h2 span {
+      font-family: 'Fira Code', monospace;
+      color: #00ffcc;
+    }
+
+    .typed-cursor {
+      font-weight: bold;
+      color: #00ffcc;
+    }
   </style>
 </head>
 <body>
@@ -55,7 +65,7 @@
 
     <!-- About -->
     <section id="about" class="section">
-      <h2><span class="typed" data-text="About Me"></span></h2>
+      <h2><span id="type-about"></span></h2>
       <div class="row align-items-center mt-3">
         <div class="col-md-3">
           <img src="assets/profilepic.jpg" class="img-fluid rounded-circle shadow" alt="Profile Photo" />
@@ -68,7 +78,7 @@
 
     <!-- Education -->
     <section id="education" class="section">
-      <h2><span class="typed" data-text="Education"></span></h2>
+      <h2><span id="type-education"></span></h2>
       <ul class="mt-3">
         <li>Ph.D., Electrical and Computer Engineering — UNH (2019–2025)</li>
         <li>M.S., Environmental Economics — UNH (2017–2019)</li>
@@ -78,19 +88,19 @@
 
     <!-- Experience -->
     <section id="experience" class="section">
-      <h2><span class="typed" data-text="Professional Experience"></span></h2>
+      <h2><span id="type-experience"></span></h2>
       <p class="mt-3">Highlights of academic, research, and assistantship positions from Ph.D., M.S., and postdoc years. Includes embedded ML systems, signal processing, space weather prediction, and interdisciplinary collaborations.</p>
     </section>
 
     <!-- Publications -->
     <section id="publications" class="section">
-      <h2><span class="typed" data-text="Peer-reviewed Publications and Presentations"></span></h2>
+      <h2><span id="type-publications"></span></h2>
       <p class="mt-3">Placeholder for selected journal papers, IEEE conferences, and workshop abstracts. You can format this using a list, grid, or downloadable BibTeX entries.</p>
     </section>
 
     <!-- Skills -->
     <section id="skills" class="section">
-      <h2><span class="typed" data-text="Skills and Certifications"></span></h2>
+      <h2><span id="type-skills"></span></h2>
       <ul class="mt-3">
         <li>Programming: Python, C/C++, Java, R, MATLAB</li>
         <li>Frameworks: TensorFlow, PyTorch, TinyML, ROS2</li>
@@ -100,13 +110,13 @@
 
     <!-- Misc -->
     <section id="misc" class="section">
-      <h2><span class="typed" data-text="Miscellaneous"></span></h2>
+      <h2><span id="type-misc"></span></h2>
       <p class="mt-3">Awards, honors, student memberships, volunteering roles, and reviewer duties (IEEE IoT Journal, IEEE Access, etc.)</p>
     </section>
 
     <!-- Download -->
     <section id="downloads" class="section">
-      <h2><span class="typed" data-text="Download Resume & CV"></span></h2>
+      <h2><span id="type-downloads"></span></h2>
       <div class="download-buttons mt-3">
         <a href="resume.pdf" class="btn btn-success" download><i class="fas fa-file-alt"></i> Download Resume</a>
         <a href="cv.pdf" class="btn btn-outline-info" download><i class="fas fa-file-archive"></i> Download Full CV</a>
@@ -115,7 +125,7 @@
 
     <!-- Contact -->
     <section id="contact" class="section">
-      <h2><span class="typed" data-text="Contact"></span></h2>
+      <h2><span id="type-contact"></span></h2>
       <div class="contact-icons mt-3">
         <a href="mailto:talhasiddique265@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a>
         <a href="tel:+16036179246" target="_blank" title="Phone"><i class="fas fa-phone"></i></a>
@@ -134,3 +144,4 @@
 
 </body>
 </html>
+
