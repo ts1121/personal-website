@@ -6,29 +6,29 @@ document.addEventListener("DOMContentLoaded", function () {
       if (entry.isIntersecting && !observed.has(entry.target)) {
         const text = entry.target.getAttribute('data-text');
 
-        new Typed(entry.target, {
-          strings: [text],
-          typeSpeed: 50,
-          showCursor: true,
-          cursorChar: '|',
-          loop: false
-        });
-
-        observed.add(entry.target);
+        if (text) {
+          entry.target.textContent = ''; // Clear static fallback
+          new Typed(entry.target, {
+            strings: [text],
+            typeSpeed: 50,
+            showCursor: true,
+            cursorChar: '|',
+            loop: false
+          });
+          observed.add(entry.target);
+        }
       }
     });
   }, {
-    threshold: 0.1 // 🔁 Lowered threshold to trigger earlier
+    threshold: 0.1
   });
 
-  const allTyped = document.querySelectorAll('.typed');
+  document.querySelectorAll('.typed').forEach((el, index) => {
+    const text = el.getAttribute('data-text');
 
-  allTyped.forEach((el, index) => {
-    el.textContent = ''; // Ensure clean start
-
-    // ✅ Type the first section immediately
-    if (index === 0) {
-      const text = el.getAttribute('data-text');
+    // Immediately animate the first one
+    if (index === 0 && text) {
+      el.textContent = '';
       new Typed(el, {
         strings: [text],
         typeSpeed: 50,
@@ -42,3 +42,4 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
